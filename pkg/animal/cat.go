@@ -10,7 +10,7 @@ type Cat struct {
 }
 
 func NewCat(name string, age uint, shape string) Cat {
-	return Cat{Animal{age, shape, name, mew}}
+	return Cat{Animal{age, shape, name}}
 
 }
 

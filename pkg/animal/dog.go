@@ -9,7 +9,7 @@ type Dog struct {
 }
 
 func NewDog(name string, age uint, shape string) Dog {
-	return Dog{Animal{age, shape, name, waf}}
+	return Dog{Animal{age, shape, name}}
 
 }
 func (d *Dog) MakeSound() {
