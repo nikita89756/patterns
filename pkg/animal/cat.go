@@ -14,6 +14,9 @@ func NewCat(name string, age uint, shape string) Cat {
 
 }
 
+func (c *Cat) MakeSound() {
+	mew()
+}
 func mew() {
 	if rand.Intn(200) > 100 {
 		fmt.Println("MEW")

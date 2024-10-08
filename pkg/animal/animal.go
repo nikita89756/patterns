@@ -24,5 +24,5 @@ func (a *Animal) SetName(name string) {
 }
 
 func (a *Animal) MakeSound() {
-	a.f()
+
 }
