@@ -1,8 +1,8 @@
 package main
 
 import (
-	. "misis/pkg/animal"
-	. "misis/pkg/person"
+	. "misis/pkg/laba2/animal"
+	. "misis/pkg/laba2/person"
 )
 
 func main() {
