@@ -37,7 +37,7 @@ func (png *PngFactory) CreateImg(s string) Img{
 
 func (png *PngFactory) CreateCompressed(s string)string{
 	fmt.Println(png.logger.LogInfo("Фото: " +s+"сжато"))
-	return "gziped"
+	return "png -> gziped"
 }
 
 func (p *pngPhoto) GetDate() time.Time{
@@ -45,6 +45,36 @@ func (p *pngPhoto) GetDate() time.Time{
 }
 
 func (p *pngPhoto )GetSize() int{
+	return p.size
+}
+
+type JpegFactory struct{
+	logger *Mlogger
+}
+
+type jpegPhoto struct{
+	date time.Time
+	size int
+}
+
+func NewJpegFactory(log *Mlogger) PhotoFactory{
+	return &JpegFactory{log}
+}
+func (png *JpegFactory) CreateImg(s string) Img{
+	fmt.Println(png.logger.LogInfo("Фото: " +s))
+	return &jpegPhoto{date:time.Now(),size: rand.Int()}
+}
+
+func (png *JpegFactory) CreateCompressed(s string)string{
+	fmt.Println(png.logger.LogInfo("Фото: " +s+"сжато"))
+	return "jpeg -> gziped"
+}
+
+func (p *jpegPhoto) GetDate() time.Time{
+	return p.date
+}
+
+func (p *jpegPhoto )GetSize() int{
 	return p.size
 }
 

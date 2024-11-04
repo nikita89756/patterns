@@ -14,11 +14,11 @@ func main(){
 
 	message := builder.SetSender("Nikita").SetDestination("Artem").SetMessage("text","LABA3").Build()
 
-	message.Message.Send()
+	message.Message.Create()
 
 	message = builder.SetSender("Avanesyan").SetDestination("Artem").SetMessage("photo","/papka/papka2/joto.png").Build()
 
-	message.Message.Send()
+	message.Message.Create()
 
 	log1 := NewMlogger()
 	log2 := NewMlogger()
