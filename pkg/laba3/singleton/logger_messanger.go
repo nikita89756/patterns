@@ -45,8 +45,5 @@ func (m *Mlogger) LogInfo(str string)string{
 }
 
 func (m *Mlogger) LogError(str string)string{
-	if m.level >=0{
 		return fmt.Sprintf("%s :: %s",time.Now(),str)
-	}
-	return ""
 }
