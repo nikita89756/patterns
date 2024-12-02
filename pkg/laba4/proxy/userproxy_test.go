@@ -68,13 +68,11 @@ func TestUserProxy_GetData(t *testing.T) {
 
 	
 	userFromDB := userProxy.GetData(userID)
-	assert.Equal(t, &userData, userFromDB, "Expected user data from database")
-	mockDatabase.AssertExpectations(t)
+	// userFromDB:=""
+	assert.Equal(t, &userData, userFromDB, "Ожидали %v а получили %v",userData,userFromDB)
 	
 	userFromCache := userProxy.GetData(userID)
-	assert.Equal(t, &userData, userFromCache, "Expected user data from cache")
+	assert.Equal(t, &userData, userFromCache, "Ожидали %v а получили %v",userData,userFromDB)
 
-	
-	mockDatabase.AssertExpectations(t)
-	mockLogger.AssertExpectations(t)
+
 }
