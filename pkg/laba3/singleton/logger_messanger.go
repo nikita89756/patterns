@@ -6,9 +6,17 @@ import (
 	"time"
 )
 
+type Logger interface{
+	LevelDebug()
+	LevelInfo()
+	LogInfo(str string)string
+	LogError(str string)string
+}
+
 type Mlogger struct{
 	level int
 	substring string
+	
 }
 
 	var (

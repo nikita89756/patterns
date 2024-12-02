@@ -40,7 +40,7 @@ func main() {
 	User = users2.GetData(1)
 	fmt.Println(User)
 
-	sender := sender.NewSenderFacade(Mlogger,data1)
-	sender.Send(1,3,"hello bratishka","text")
+	sender := sender.NewSenderFacade(Mlogger,data1,3)
+	sender.Send(1,3,"hello bratishka :)","text")
 
 }
