@@ -4,11 +4,10 @@ type Animal struct {
 	age   uint
 	shape string
 	name  string
-	f     func()
 }
 
 func NewAnimal(age uint, shape string, name string) Animal {
-	return Animal{age, shape, name, nil}
+	return Animal{age, shape, name}
 }
 
 func (a *Animal) GetName() string {
@@ -24,5 +23,5 @@ func (a *Animal) SetName(name string) {
 }
 
 func (a *Animal) MakeSound() {
-	a.f()
+
 }

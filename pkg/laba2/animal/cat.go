@@ -10,10 +10,13 @@ type Cat struct {
 }
 
 func NewCat(name string, age uint, shape string) Cat {
-	return Cat{Animal{age, shape, name, mew}}
+	return Cat{Animal{age, shape, name}}
 
 }
 
+func (c *Cat) MakeSound() {
+	mew()
+}
 func mew() {
 	if rand.Intn(200) > 100 {
 		fmt.Println("MEW")
