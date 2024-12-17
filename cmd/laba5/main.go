@@ -26,30 +26,31 @@ func main(){
 	emailListener:=news.EmailListener{User:user}
 
 	newsPublisher.Subscribe(smsListener)
+	newsPublisher.NotifyAll("Это второй")
 	newsPublisher.Subscribe(emailListener)
 
 	newsPublisher.NotifyAll("Это второй")
 
 	text := `
 	{
-		"name": "John Doe",
+		"name": "Y",
 		"age": 30,
-		"email": "john.doe@example.com"
+		"email": "e@example.com"
 	}
 	`
 	text2 :=`
 	<person>
-		<name>John Doe</name>
+		<name>y</name>
 		<age>30</age>
-		<email>john.doe@example.com</email>
+		<email>e@example.com</email>
 	</person>`
 	text3:=`
-name = "John Doe"
+name = "e"
 age = 30
 [address]
-street = "123 Main St"
-city = "Anytown"
-state = "CA"
+street = "r"
+city = "t"
+state = "C"
 `
 
 	base:=&handler.BaseParseHandler{}
